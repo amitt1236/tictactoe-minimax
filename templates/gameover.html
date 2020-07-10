@@ -19,6 +19,16 @@
         </style>
     </head>
     <body>
+        <h1>
+            {% if winner %}
+                {{ winner }} wins
+            {% endif %}
+        </h1>
+        <h1>
+            {% if draw %}
+                Tie
+            {% endif %}
+        </h1>
         <table>
             {% for i in range(3) %}
                 <tr>
@@ -26,9 +36,7 @@
                         <td>
                             {% if game[i][j] %}
                                 {{ game[i][j] }}
-                            {% else %}
-                                <a href="{{ url_for('play', row=i, col=j) }}">Play {{ turn }} here.</a>
-                            {% endif %}
+                            {% endif %}    
                         </td>
                     {% endfor %}
                 </tr>
