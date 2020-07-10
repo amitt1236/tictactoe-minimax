@@ -1,8 +1,6 @@
 from flask import Flask, render_template, session, redirect, url_for
 from flask_session import Session
 from tempfile import mkdtemp
-import copy
-import math
 
 app = Flask(__name__)
 
