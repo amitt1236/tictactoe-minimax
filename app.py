@@ -40,7 +40,6 @@ def play(row, col):
         session["turn"] = "X"   
     return redirect(url_for("index"))
 
-@app.route("/player")
 def winner(board):
     # check colums
     for i in range(3):
