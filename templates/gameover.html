@@ -1,15 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
-    <h1>
+    <div>
         {% if winner %}
             {{ winner }} wins
         {% endif %}
-    </h1>
-    <h1>
         {% if draw %}
             Tie
         {% endif %}
-    </h1>
+    </div>
     <table>
         {% for i in range(3) %}
             <tr>
