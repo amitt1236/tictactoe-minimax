@@ -8,7 +8,7 @@
                         {% if game[i][j] %}
                             {{ game[i][j] }}
                         {% else %}
-                            <a href="{{ url_for('play', row=i, col=j) }}">Play {{ turn }} here.</a>
+                            <a href="{{ url_for('play', row=i, col=j) }}">Play {{ turn }} here</a>
                         {% endif %}
                     </td>
                 {% endfor %}
