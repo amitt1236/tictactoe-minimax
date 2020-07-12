@@ -35,12 +35,15 @@ def reset():
 
 @app.route("/play/<int:row>/<int:col>")
 def play(row, col):
-    session["board"][row][col] = session["turn"]
-    if session["turn"] == "X":
-        session["turn"] = "O"
+    if session["board"][row][col] == None:
+        session["board"][row][col] = session["turn"]
+        if session["turn"] == "X":
+            session["turn"] = "O"
+        else:
+            session["turn"] = "X"   
+        return redirect(url_for("index"))
     else:
-        session["turn"] = "X"   
-    return redirect(url_for("index"))
+        return redirect(url_for("index"))    
 
 @app.route("/computer")
 def computer():
