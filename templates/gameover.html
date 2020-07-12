@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
-    <div>
+    <h1>
         {% if winner %}
             {{ winner }} wins
         {% endif %}
         {% if draw %}
             Tie
         {% endif %}
-    </div>
+    </h1>
     <table>
         {% for i in range(3) %}
             <tr>
@@ -21,10 +21,10 @@
             </tr>
         {% endfor %}
     </table>
-    <h1>
-        <a href="/reset">Reset board</a>
-    </h1>
-    <h1>
-        <a href="#">Let the computer play</a>
-    </h1>
+    <div>
+        <a href="/reset" class="button4" style="background-color:#4e9af1">Reset game</a>
+    </div>
+    <div>
+        <a href="/computer" class="button4" style="background-color:#4e9af1">Let the computer play</a>
+    </div>
 {% endblock %}
