@@ -44,7 +44,10 @@ def play(row, col):
 
 @app.route("/computer")
 def computer():
-    move = minimax(session["board"])
+    if sum(j.count(None) for j in session["board"]) == 9:
+        move = 0, 0
+    else:       
+        move = minimax(session["board"])
     return redirect(url_for('play', row=move[0], col=move[1]))
 
 @app.route("/not")

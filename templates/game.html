@@ -8,11 +8,9 @@
         {% for i in range(3) %}
             <tr>
                 {% for j in range(3) %}
-                    <td>
+                    <td onClick="document.location.href='{{ url_for('play', row=i, col=j) }}';">
                         {% if game[i][j] %}
                             {{ game[i][j] }}
-                        {% else %}
-                            <a href="{{ url_for('play', row=i, col=j) }}">Play {{ turn }} here</a>
                         {% endif %}
                     </td>
                 {% endfor %}
@@ -20,9 +18,9 @@
         {% endfor %}
     </table>
     <h1>
-        <a href="/reset">reset board</a>
+        <a href="/reset">Reset board</a>
     </h1>
     <h1>
-        <a href="/computer">let the computer play</a>
+        <a href="/computer">Let the computer play</a>
     </h1>
 {% endblock %}
