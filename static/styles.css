@@ -41,6 +41,10 @@ a.button4{
 a.button4:hover{
    border-color: rgb(46, 66, 243);
 }
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }  
 div{
     text-align: center;
     margin-top: 10px;
