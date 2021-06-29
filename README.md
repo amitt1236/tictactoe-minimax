@@ -5,4 +5,4 @@ The game has ai mode implemented with minimax Algorithm.,
 
 https://tic-tac-toe-aflalo.herokuapp.com
 
-![](./board.png)
+![](./board.png = 500x500)
