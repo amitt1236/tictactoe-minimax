@@ -1,7 +1,7 @@
-# tictactoe
-tictactoe game using flask.
+# TicTacToe
+TicTacToe game using flask, Html, Css.
 
-The game has ai mode implemented with minimax Algorithm.
+The game has Ai mode implemented with minimax Algorithm.
 
 https://tic-tac-toe-aflalo.herokuapp.com
 
